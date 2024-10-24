@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses & Certificates</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div id="header header1">
+        <div class="container">
+          <nav>
+            <img src="logo.png" class="logo">
+            <ul id="sidemenu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="education.html">Eductaion</a></li>
+              <li><a href="courses.html" class="active">Courses & Certificates</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <i class="fa fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa fa-solid fa-bars" onclick="openmenu()"></i>
+          </nav>
+        </div>
+    </div>
+
+  <div class="container">
+
+      <section class="content-section">
+        <h1>My Courses & Certificates</h1>
+        <div class="certificate-gallery">
+          <!-- Certificate 1 -->
+          <div class="certificate-item">
+            <img src="Badge for Cloud Speech API 3 Ways.png" alt="Cloud Speech API: 3 Ways" class="certificate-img">
+            <p><span>Cloud Speech API: 3 Ways</span> - Google</p>
+          </div>
+          
+          <!-- Certificate 2 -->
+          <div class="certificate-item">
+            <img src="The Basics of Google Cloud Compute.png" alt="The Basics of Google Compute" class="certificate-img">
+            <p><span>The Basics of Google Compute</span> - Google</p>
+          </div>
+      
+          <!-- Certificate 3 -->
+          <div class="certificate-item">
+            <img src="Get Started with Cloud Storage.png" alt="Get Started with Cloud Storage" class="certificate-img">
+            <p><span>Get Started with Cloud Storage</span> - Google</p>
+          </div>
+      
+          <!-- Certificate 4 -->
+          <div class="certificate-item">
+            <img src="Get Started with API Gateway.png" alt="Get Started with API Gateway" class="certificate-img">
+            <p><span>Get Started with API Gateway</span> - Google</p>
+          </div>
+      
+          <!-- Certificate 5 -->
+          <div class="certificate-item">
+            <img src="Get Started with Looker.png" alt="Get Started with Looker" class="certificate-img">
+            <p><span>Get Started with Looker</span> - Google</p>
+          </div>
+      
+          <!-- Certificate 6 -->
+          <div class="certificate-item">
+            <img src="Get Started with Dataplex.png" alt="Get Started with Dataplex" class="certificate-img">
+            <p><span>Get Started with Dataplex</span> - Google</p>
+          </div>
+      
+          <!-- Certificate 7 -->
+          <div class="certificate-item">
+            <img src="Postman API Fundamentals Student Expert.png" alt="Postman API Fundamentals Student Expert" class="certificate-img">
+            <p><span>Postman API Fundamentals Student Expert</span> - Postman API</p>
+          </div>
+        </div>
+      </section>
+      
+
+    <div class="copyright">
+        <p>Copyright © 2024. Made with <i class="fa-solid fa-heart"></i> by Debasree Sen Gupta </p>
+      </div>
+  </div>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link")
+      document.getElementById(tabname).classList.add("active-tab")
+    }
+  </script>
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwNWhCucH61P1ekLA3ZeJzdDOCBWPcfHsG7QBwwlw9qubX6Nd97xwNzMR_sAKPvzCnPOA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {msg.innerHTML = "Message sent successfully!"
+          setTimeout(function(){
+            msg.innerHTML = " "
+          },5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
+

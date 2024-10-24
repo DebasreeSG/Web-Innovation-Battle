@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Innivation Battle</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="logo.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="education.html">Eductaion</a></li>
+          <li><a href="courses.html">Courses & Certificates</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <i class="fa fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>1st Year B.Tech Student</p>
+        <h1>Hi, I'm <span>Debasree</span><br> Sen Gupta</h1>
+      </div>
+    </div>
+  </div>
+  <!-- About Section -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="pic1.jpg" >
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Hi there!I'm a passionate learner with a keen interest in technology and its ability to shape our future. Currently, I’m pursuing a B.Tech in Computer Science at the University of Engineering & Management, Kolkata, with a focus on Cybersecurity, Blockchain Technology, and Internet of Things. While my studies are centered around computer science, my love for biology has profoundly influenced my academic and career aspirations. I believe that technology has the power to revolutionize the field of biology, and I am dedicated to combining my knowledge of computer science with biological sciences. My goal is to develop innovative solutions that can address pressing challenges in healthcare, environmental conservation, and biological research.I strive to blend my academic knowledge with hands-on experience, which I believe is essential for personal and professional growth. I am always open to learning new things and expanding my horizons. I love to participate in the events my college conducts, including hackathons and tech fairs. Attending seminars and workshops not only broadens my knowledge but also helps me connect with professionals and experts in my field. These interactions have been invaluable in my journey, as they allow me to learn about the latest advancements and trends in science and technology.</p>
+          
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Python</span></li>
+              <li><span>Web Development</span></li>
+              <li><span>AutoCAD</span></li>
+              <li><span>MATLAB</span></li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Website Development</span><br> - IEM Kolkata</li>
+              <li><span>Adventure Certificate Course</span><br> - IHCAE, Govt of Sikkim</li>
+              <li><span>Design & 3D Printing Workshop</span><br> - UEM Kolkata</li>
+              
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>B.Tech CSE(Cybersecurity <br> with Blockchain Technology,IoT)</span><br>University of Engineering & Management, Kolkata</li>
+              <li><span>ISC</span><br>The Future Foundation School</li>
+              <li><span>ICSE</span><br>Narmada School</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="poster">
+    <h1 class="sub-title">Membership</h1>
+    <div class="container">
+      <div class="poster">
+        <img src="ieee.png" alt="My poster for the Fyler Fusion Competition">
+        <h2>IEEE UEM SB Member</h2>
+      </div>
+    </div>
+  </div>
+  <div id="poster">
+    <h1 class="sub-title">Poster/Paper Presentations</h1>
+    <div class="container">
+      <div class="poster">
+        <img src="poster.png" alt="My poster for the Fyler Fusion Competition">
+        <h2>My poster for the Fyler Fusion Competition <br> conducted by UEM Kolkata</h2>
+      </div>
+    </div>
+  </div>
+  
+
+   <!-- Contact Me -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>debasree854@gmail.com</p>
+            <p><i class="fa-solid fa-square-phone"></i>+916291690247</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/debasree.sengupta.73/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/debasree_sengupta/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/debasree-sen-gupta"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/DebasreeSG"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://t.me/Debasree_SG"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <a href="Web Innovators Battle.pdf" download class="btn btn2">Download my CV</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required> 
+              <input type="email" name="Email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2024. Made with <i class="fa-solid fa-heart"></i> by Debasree Sen Gupta </p>
+      </div>
+    </div>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link")
+      document.getElementById(tabname).classList.add("active-tab")
+    }
+  </script>
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwNWhCucH61P1ekLA3ZeJzdDOCBWPcfHsG7QBwwlw9qubX6Nd97xwNzMR_sAKPvzCnPOA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {msg.innerHTML = "Message sent successfully!"
+          setTimeout(function(){
+            msg.innerHTML = " "
+          },5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

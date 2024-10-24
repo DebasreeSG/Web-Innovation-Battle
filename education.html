@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Education</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div id="header header1">
+        <div class="container">
+          <nav>
+            <img src="logo.png" class="logo">
+            <ul id="sidemenu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="education.html" class="active">Eductaion</a></li>
+              <li><a href="courses.html">Courses & Certificates</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <i class="fa fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa fa-solid fa-bars" onclick="openmenu()"></i>
+          </nav>
+        </div>
+    </div> 
+    <div class="container">
+        <h1>My Educational Journey</h1>
+    <!-- School Section -->
+    <section class="education-section">
+        <div class="education-item">
+          <img src="TFFS.jpg" alt="School Image" class="education-img">
+          <p ><strong>The Future Foundation School</strong></p>
+          <p>ISC 2024</p>
+          <p><strong>Highlights:</strong> Top 10% in Science Stream</p>
+          <p><strong>Extracurricular:</strong> Debate Team Captain, Science Club Member</p>
+        </div>
+  
+        <div class="education-item">
+          <img src="Narmada School.jpg" alt="School Image" class="education-img">
+          <p><strong>Narmada School</strong></p>
+          <p>ICSE 2022</p>
+          <p><strong>Highlights:</strong> 93.6% in Board Exams</p>
+          <p><strong>Extracurricular:</strong> Science Club Member, Art Club Member</p>
+        </div>
+      </section>
+  
+      <!-- College Section -->
+      <section class="education-section">
+        <div class="education-item">
+          <img src="UEM-Kolkata.jpg" alt="College Image" class="education-img">
+          <p><strong>University of Engineering & Management, Kolkata</strong></p>
+          <p>B.Tech CSE (Cybersecurity with Blockchain Technology, IoT)</p>
+          <p>Batch 2028</p>
+          <p><strong>Extracurricular:</strong> IEEE UEM SB Member, IEEE WIE,MTTS,CS Member</p>
+        </div>
+      </section>
+
+      <!-- Awards Section -->
+<section class="education-section">
+    <h2>Awards & Honors</h2>
+    <div class="education-item">
+        <img src="Award.jpeg" alt="Jolly Ghosh Memorial Award" class="award-img">
+        <p><strong>Jolly Ghosh And Prashanta Kumar Ghosh Memorial Award For Excellence In Biological Sciences</strong></p>
+        <p>Year: 2024</p>
+        <p><strong>Achievement:</strong> Awarded for scoring the highest marks in Biology ISC 2024 Paper.</p>
+    </div>
+</section>
+
+  
+      <!-- Skills and Technologies Section -->
+      <section class="education-section">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-list">
+          <ul>
+            <li><strong>Programming Languages:</strong> Python, Java, C++</li>
+            <li><strong>Tools & Technologies:</strong> AutoCAD,MATLAB, Git</li>
+            <li><strong>Cloud Platforms:</strong> AWS, Google Cloud</li>
+          </ul>
+        </div>
+      </section>
+  
+      <!-- Skills Proficiency with Progress Bars -->
+      <section class="skills-progress">
+        <h2>Skills Proficiency</h2>
+        <div class="progress-bar">
+          <h3>Python</h3>
+          <div class="progress">
+            <div class="progress-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+  
+        <div class="progress-bar">
+          <h3>Java</h3>
+          <div class="progress">
+            <div class="progress-fill" style="width: 55%;"></div>
+          </div>
+        </div>
+  
+        <div class="progress-bar">
+          <h3>Blockchain</h3>
+          <div class="progress">
+            <div class="progress-fill" style="width: 40%;"></div>
+          </div>
+        </div>
+
+        <div class="progress-bar">
+            <h3>AutoCAD</h3>
+            <div class="progress">
+              <div class="progress-fill" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <h3>MATLAB</h3>
+            <div class="progress">
+              <div class="progress-fill" style="width: 60%;"></div>
+            </div>
+        </div>
+      </section>
+  
+      <!-- Education Timeline -->
+      <section class="education-timeline">
+        <h2>Education Timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>2028</h3>
+            <p>B.Tech CSE, University of Engineering & Management, Kolkata</p>
+          </div>
+         
+          <div class="timeline-item">
+            <h3>2024</h3>
+            <p>ISC, The Future Foundation School</p>
+          </div>
+          <div class="timeline-item">
+            <h3>2022</h3>
+            <p>ICSE, Narmada School</p>
+          </div>
+        </div>
+      </section>
+  
+  </div>
+  <div class="copyright">
+    <p>Copyright © 2024. Made with <i class="fa-solid fa-heart"></i> by Debasree Sen Gupta </p>
+  </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link")
+      document.getElementById(tabname).classList.add("active-tab")
+    }
+    
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+      sidemenu.style.right = "0";
+    }
+    function closemenu() {
+      sidemenu.style.right = "-200px";
+    }
+    
+    // Smooth scroll for internal links
+    const links = document.querySelectorAll('a[href^="#"]');
+    for (const link of links) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+    
+    // Animate progress bars on scroll
+    const progressBars = document.querySelectorAll('.progress-fill');
+    
+    const animateBars = () => {
+      const windowHeight = window.innerHeight;
+      const windowScrollY = window.scrollY;
+    
+      progressBars.forEach((bar) => {
+        const barTop = bar.getBoundingClientRect().top + windowScrollY;
+        if (windowScrollY + windowHeight > barTop) {
+          bar.style.transition = "width 2s ease-in-out"; // Add transition for smooth effect
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', animateBars);
+    </script>
+    
+
+
+</script>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwNWhCucH61P1ekLA3ZeJzdDOCBWPcfHsG7QBwwlw9qubX6Nd97xwNzMR_sAKPvzCnPOA/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {msg.innerHTML = "Message sent successfully!"
+      setTimeout(function(){
+        msg.innerHTML = " "
+      },5000)
+      form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+})
+</script>
+
+</body>
+</html>
+
